@@ -15,9 +15,12 @@ if [ "x$HTTPS_PORT" = "x" ]; then
     HTTPS_PORT="8443"
 fi
 
+# Patch java executable
+JAVA_EXEC=$JAVA_HOME/bin/java
+
 # Check Java version. Make sure java command is available
-echo "Using java: $JAVA_HOME" && `java -version`
-VERSION=`java -version 2>&1  | egrep '"([0-9].[0-9]\..*[0-9]).*"' | awk '{print substr($3,2,length($3)-2)}' | awk '{print substr($1, 3, 3)}' | sed -e 's;\.;;g'`
+echo "Using java: $JAVA_HOME" && `$JAVA_EXEC -version`
+VERSION=`$JAVA_EXEC -version 2>&1  | egrep '"([0-9].[0-9]\..*[0-9]).*"' | awk '{print substr($3,2,length($3)-2)}' | awk '{print substr($1, 3, 3)}' | sed -e 's;\.;;g'`
 if [ "$VERSION" -lt "80" ]; then
    echo "ERROR: JVM must be greater than 1.7"
    exit 1;
@@ -53,7 +56,7 @@ echo $JAVA_OPTS \
 	-jar $MAIN "$DIRNAME/smarthome.xargs"
 
 # Start the framework. Make sure java command is available
-java $JAVA_OPTS \
+$JAVA_EXEC $JAVA_OPTS \
 	-Dosgi.clean=true \
 	-Dorg.osgi.framework.storage="$BASE_FOLDER/userdata/storage" \
 	-Dosgi.noShutdown=true \
