@@ -26,7 +26,10 @@ fi
 # Find the concierge framework jar
 MAIN=$(find framework -name "org.eclipse.concierge-5.0.0*.jar" | sort | tail -1);
 
-echo  $JAVA_OPTS \
+# Create userdata folder structure
+mkdir $BASE_FOLDER/userdata && mkdir $BASE_FOLDER/userdata/logs && mkdir $BASE_FOLDER/userdata/mapdb
+
+echo $JAVA_OPTS \
 	-Dosgi.clean=true \
 	-Dorg.osgi.framework.storage="$BASE_FOLDER/userdata/storage" \
 	-Dosgi.noShutdown=true \
