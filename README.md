@@ -1,5 +1,6 @@
-# Eclipse SmartHome Packaging Sample
-<img src="https://www.eclipse.org/concierge/images/logo.png" alt="concierge osgi" width="200"/>
+# Ericsson SmartHome Packaging (SmartHome on Concierge)
+
+<img src="http://logok.org/wp-content/uploads/2014/05/Ericsson-logo-blue.png" alt="ericsson logo" width="200"/>
 
 This repo contains a sample of how to create a small working runtime package that uses the Eclipse SmartHome framework.
 You can use this example to build an own minimal distribution with a very optimized memory footprint.
