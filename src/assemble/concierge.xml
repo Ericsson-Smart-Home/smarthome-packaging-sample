@@ -67,6 +67,19 @@
             </includes>
         </fileSet>
 
+        <!-- include Eclipse SmartHome Ericsson modules -->
+        <fileSet>
+            <directory>${project.basedir}/bundles/</directory>
+            <outputDirectory>runtime/concierge/system/com.ericsson.smarthome/</outputDirectory>
+            <filtered>false</filtered>
+            <fileMode>0644</fileMode>
+            <directoryMode>0755</directoryMode>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+
+
         <!-- include 3rd party libs -->
         <fileSet>
             <directory>${project.build.directory}/platform/</directory>
@@ -125,6 +138,9 @@
 
                 <!-- JmDNS -->
                 <include>org.jupnp-*</include>
+
+                <!-- Paho client -->
+                <include>org.eclipse.paho.client.mqttv3-*</include>
             </includes>
         </fileSet>
 
