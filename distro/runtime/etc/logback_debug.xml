@@ -6,22 +6,28 @@
 		</encoder>
 	</appender>
 
-	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${smarthome.logdir:-userdata/logs}/smarthome.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- weekly rollover and archiving -->
+			<fileNamePattern>${smarthome.logdir:-userdata/logs}/smarthome-%d{yyyy-MM-dd}.log</fileNamePattern>
+
+			<!-- maximum number of archive files to keep -->
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
 		<encoder>
 			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] [%-30.30logger{36}:%-5line] - %msg%ex{10}%n</pattern>
 		</encoder>
 	</appender>
 
-	<appender name="EVENTFILE"
-		class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<appender name="EVENTFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${smarthome.logdir:-userdata/logs}/events.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- weekly rollover and archiving -->
-			<fileNamePattern>${smarthome.logdir:-userdata/logs}/events-%d{yyyy-ww}.log.zip</fileNamePattern>
+			<fileNamePattern>${smarthome.logdir:-userdata/logs}/events-%d{yyyy-MM-dd}.log</fileNamePattern>
 
 			<!-- maximum number of archive files to keep -->
-			<maxHistory>26</maxHistory>
+			<maxHistory>30</maxHistory>
 		</rollingPolicy>
 		<encoder>
 			<pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
