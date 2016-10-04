@@ -232,7 +232,7 @@
 -istart ${esh.dir}/org.eclipse.smarthome.binding.wemo-${esh.version}*.jar
 
 # Ericsson bundles
--istart ${ericsson.dir}/com.ericsson.smarthome.alexa-*.jar
+-istart ${ericsson.dir}/com.ericsson.smarthome.binding.alexa-*.jar
 -istart ${ericsson.dir}/com.ericsson.smarthome.binding.tv-*.jar
 
 # Eclipse SmartHome UI
