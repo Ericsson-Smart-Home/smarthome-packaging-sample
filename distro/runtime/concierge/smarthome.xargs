@@ -234,6 +234,7 @@
 # Ericsson bundles
 -istart ${ericsson.dir}/com.ericsson.smarthome.binding.alexa-*.jar
 -istart ${ericsson.dir}/com.ericsson.smarthome.binding.tv-*.jar
+-istart ${ericsson.dir}/com.ericsson.smarthome.binding.doorbird-*.jar
 
 # Eclipse SmartHome UI
 -istart ${esh.dir}/org.eclipse.smarthome.ui.paper-${esh.version}*.jar
