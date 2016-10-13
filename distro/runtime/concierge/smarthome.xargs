@@ -116,11 +116,11 @@
 
 # Enable logging. Use slf4j facade with logback backend. Install bridges for JCL, JUL and log4j
 -install ${system.dir}/slf4j-api-1.7*.jar
--install ${system.dir}/logback-core-1.0.7*.jar
--install ${system.dir}/logback-classic-1.0.7*.jar
+-install ${system.dir}/logback-core-1.1.7*.jar
+-install ${system.dir}/logback-classic-1.1.7*.jar
 -start ${system.dir}/slf4j-api-1.7*.jar
--start ${system.dir}/logback-core-1.0.7*.jar
--start ${system.dir}/logback-classic-1.0.7*.jar
+-start ${system.dir}/logback-core-1.1.7*.jar
+-start ${system.dir}/logback-classic-1.1.7*.jar
 
 # Add Log bridges
 -istart ${system.dir}/jcl-over-slf4j-1.7*.jar
