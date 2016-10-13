@@ -39,7 +39,7 @@
 		<appender-ref ref="STDOUT" />
 	</logger>
 
-	<logger name="org.eclipse.smarthome" level="INFO" />
+	<logger name="org.eclipse.smarthome" level="DEBUG" />
 
 	<logger name="org.eclipse.jetty" level="INFO" />
     <logger name="org.jupnp" level="ERROR"/>
