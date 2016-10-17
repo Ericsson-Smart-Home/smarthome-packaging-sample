@@ -309,7 +309,7 @@
         <dependency>
             <groupId>org.eclipse.smarthome.binding</groupId>
             <artifactId>org.eclipse.smarthome.binding.wemo</artifactId>
-            <version>${esh.version}</version>
+            <version>0.9.0-SNAPSHOT</version>
         </dependency>
 
         <!-- OSGI http services -->

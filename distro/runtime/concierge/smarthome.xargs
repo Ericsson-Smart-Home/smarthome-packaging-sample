@@ -229,7 +229,7 @@
 -istart ${esh.dir}/org.eclipse.smarthome.core.autoupdate-${esh.version}*.jar
 
 # Eclipse SmartHome Bindings
--istart ${esh.dir}/org.eclipse.smarthome.binding.wemo-${esh.version}*.jar
+-istart ${esh.dir}/org.eclipse.smarthome.binding.wemo-*.jar
 
 # Ericsson bundles
 -istart ${ericsson.dir}/com.ericsson.smarthome.binding.alexa-*.jar
