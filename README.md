@@ -18,7 +18,7 @@ Please use the instructions on main project's readme to install maven: https://g
 Checkout the source code from GitHub, e.g. by running:
 
 ```
-git clone https://github.com/eclipse/smarthome-packaging-sample.git
+git clone git@github.com:Ericsson-Smart-Home/smarthome-packaging-sample.git
 ```
 
 3. Build the distribution
