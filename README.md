@@ -21,7 +21,16 @@ Checkout the source code from GitHub, e.g. by running:
 git clone git@github.com:Ericsson-Smart-Home/smarthome-packaging-sample.git
 ```
 
-3. Build the distribution
+3. Define Eclipse SmartHome version
+================
+You can define which Eclipse SmartHome version you want to use for packaging. 
+* define the version in [pom.xml](/pom.xml#L18)
+* define the version in [smarthome.xargs](/distro/runtime/concierge/smarthome.xargs#L6)
+
+See here for example the available versions on nexus: https://repo.eclipse.org/content/repositories/releases/org/eclipse/smarthome/core/org.eclipse.smarthome.core/
+
+
+4. Build the distribution
 ================
 Run
 ```
@@ -48,7 +57,7 @@ You can find the created distribution under **/target/smarthome-packaging-sample
  * **etc**: Quartz configuration, Jetty configuration, keystore
 * **userdata**: This folder is created during the first startup and contains persistent userdata and the osgi storage.
 
-4. Start runtime
+5. Start runtime
 ================
 Extract the distribution zip file and start the runtime:
 ```
@@ -56,7 +65,7 @@ unzip smarthome-packaging-sample-[version].zip
 ./start.sh
 ```
 
-5. Using the UI
+6. Using the UI
 ================
 The distribution already includes the PaperUI. 
 Goto: **http://your-host:8080/** you will be redirected to **/ui/index.html**
