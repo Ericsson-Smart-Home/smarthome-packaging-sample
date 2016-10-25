@@ -43,6 +43,7 @@
 
 
 -Dorg.osgi.framework.system.packages.extra=\
+   gnu.io,\
    javax.activation,\
    javax.crypto,\
    javax.crypto.spec,\
@@ -236,15 +237,18 @@
 -istart ${ericsson.dir}/com.ericsson.smarthome.binding.tv-*.jar
 -istart ${ericsson.dir}/com.ericsson.smarthome.binding.doorbird-*.jar
 
+# Zwave Binding
+-istart ${ericsson.dir}/org.openhab.binding.zwave-2.0.0-*.jar
+
 # Eclipse SmartHome UI
 -istart ${esh.dir}/org.eclipse.smarthome.ui.paper-${esh.version}*.jar
-
 
 # FileInstall as last bundle to allow to install add-ons
 -istart ${system.dir}/org.apache.felix.fileinstall-3.5.0*.jar
 
 # Start webconsole for debugging
 -istart ${system.dir}/org.apache.felix.webconsole-4.2.16-all.jar
+
 
 
 # end of script
