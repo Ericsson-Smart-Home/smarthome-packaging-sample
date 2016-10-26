@@ -79,6 +79,17 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <id>copy-ericsson-dependencies</id>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/com.ericsson.smarthome</outputDirectory>
+                            <includeGroupIds>com.ericsson.smarthome</includeGroupIds>
+                        </configuration>
+                    </execution>
+                    <execution>
                         <id>copy-dependencies</id>
                         <goals>
                             <goal>copy-dependencies</goal>
@@ -548,6 +559,23 @@
             <artifactId>org.eclipse.paho.client.mqttv3</artifactId>
             <version>1.0.2</version>
         </dependency>
+
+        <!-- Ericsson packages -->
+        <dependency>
+            <groupId>com.ericsson.smarthome</groupId>
+            <artifactId>com.ericsson.smarthome.binding.alexa</artifactId>
+            <version>0.0.7-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.smarthome</groupId>
+            <artifactId>com.ericsson.smarthome.binding.doorbird</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ericsson.smarthome</groupId>
+            <artifactId>com.ericsson.smarthome.binding.tv</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -572,6 +600,17 @@
             <releases>
                 <enabled>true</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>ericsson-snapshots</id>
+            <name>Ericsson Artifactory used for smarthome snapshot versions</name>
+            <layout>default</layout>
+            <url>http://ec2-54-187-247-172.us-west-2.compute.amazonaws.com:8081/artifactory/list/maven-snapshot-local/
+            </url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
         </repository>
         <repository>
             <id>eclipse-snapshots</id>

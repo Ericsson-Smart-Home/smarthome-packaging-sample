@@ -79,6 +79,17 @@
             </includes>
         </fileSet>
 
+        <fileSet>
+            <directory>${project.build.directory}/com.ericsson.smarthome/</directory>
+            <outputDirectory>runtime/concierge/system/com.ericsson.smarthome/</outputDirectory>
+            <filtered>false</filtered>
+            <fileMode>0644</fileMode>
+            <directoryMode>0755</directoryMode>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+
 
         <!-- include 3rd party libs -->
         <fileSet>
