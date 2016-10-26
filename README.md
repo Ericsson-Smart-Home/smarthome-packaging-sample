@@ -2,16 +2,24 @@
 
 <img src="http://logok.org/wp-content/uploads/2014/05/Ericsson-logo-blue.png" alt="ericsson logo" width="200"/>
 
-This repo contains a sample of how to create a small working runtime package that uses the Eclipse SmartHome framework.
-You can use this example to build an own minimal distribution with a very optimized memory footprint.
-
-More information about concierge: https://www.eclipse.org/concierge/index.php
+This repo contains a maven build to create the complete smarthome runtime for ericsson smartSTB.
+As runtime concierge is used. More information about concierge: https://www.eclipse.org/concierge/index.php
 
 1. Prerequisites - Install Maven
 ================
 Please use the instructions on main project's readme to install maven: https://github.com/eclipse/smarthome#1-prerequisites
 * Make sure **mvn** command is available on your path.
 * Make sure you're using a **JDK 8**.
+* Add credentials to Ericsson artifactory to your maven configuration (maven/conf/settings.xml) like this
+
+```
+	    <server>
+            <id>ericsson-snapshots</id>
+            <username>jenkins</username>
+            <password>THE_PASSWORD</password>
+        </server>
+
+```
 
 2. Checkout
 ================
