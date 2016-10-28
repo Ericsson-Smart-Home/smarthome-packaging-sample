@@ -605,7 +605,7 @@
             <id>ericsson-snapshots</id>
             <name>Ericsson Artifactory used for smarthome snapshot versions</name>
             <layout>default</layout>
-            <url>http://ec2-54-187-247-172.us-west-2.compute.amazonaws.com:8081/artifactory/list/maven-snapshot-local/
+            <url>http://ec2-54-214-121-75.us-west-2.compute.amazonaws.com:8081/artifactory/list/maven-snapshot-local/
             </url>
             <snapshots>
                 <enabled>true</enabled>
