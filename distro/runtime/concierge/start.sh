@@ -50,6 +50,7 @@ echo $JAVA_OPTS \
 	-Dfelix.fileinstall.active.level=4 \
 	-Djava.awt.headless=true \
 	-Dfile.encoding="UTF-8" \
+	-Dgnu.io.rxtx.SerialPorts=/dev/ttyACM0 \
 	-jar $MAIN "$DIRNAME/smarthome.xargs"
 
 # Start the framework. Make sure java command is available
@@ -74,4 +75,5 @@ $JAVA_EXEC $JAVA_OPTS \
 	-Dfelix.fileinstall.active.level=4 \
 	-Djava.awt.headless=true \
 	-Dfile.encoding="UTF-8" \
+	-Dgnu.io.rxtx.SerialPorts=/dev/ttyACM0 \
 	-jar $MAIN "$DIRNAME/smarthome.xargs"
