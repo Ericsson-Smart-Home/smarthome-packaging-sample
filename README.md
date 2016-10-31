@@ -49,6 +49,7 @@ The maven build will create an ZIP file with all required components like
 * the concierge runtime
 * Eclipse SmartHome bundles
 * 3rd party bundles
+* Ericsson bundles/bindings
 * start scripts
 
 You can find the created distribution under **/target/smarthome-packaging-sample-[version].zip**
@@ -62,6 +63,7 @@ You can find the created distribution under **/target/smarthome-packaging-sample
     * **system**: Contains commons and 3rd party bundles
       * **org.eclipse.jetty**: All jetty bundles
       * **org.eclipse.smarthome**: All SmartHome bundles
+      * **com.ericsson.smarthome**: All ericsson bundles/bindings.
  * **etc**: Quartz configuration, Jetty configuration, keystore
 * **userdata**: This folder is created during the first startup and contains persistent userdata and the osgi storage.
 
